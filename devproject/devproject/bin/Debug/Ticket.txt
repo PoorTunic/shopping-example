@@ -1,0 +1,21 @@
+#	Tienda Mint Company
+
+ ====TICKET DE COMPRA====
+23/06/2020
+
+No. 	 Artículos 	 Precio
+0	 Jeans . . . . . $123
+
+
+Total a pagar: System.Windows.Forms.TextBox, Text: 123
+#	Tienda Mint Company
+
+ ====TICKET DE COMPRA====
+23/06/2020
+
+No. 	 Artículos 	 Precio
+0	 Jeans . . . . . $1
+1	 Snickers . . . . . $3
+
+
+Total a pagar: 4

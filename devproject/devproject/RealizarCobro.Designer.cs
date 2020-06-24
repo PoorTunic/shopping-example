@@ -30,17 +30,18 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RealizarCobro));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.lbltitle = new System.Windows.Forms.Label();
             this.lblhistoria = new System.Windows.Forms.Label();
             this.lbltotal = new System.Windows.Forms.Label();
             this.txttotal = new System.Windows.Forms.TextBox();
             this.btncobrar = new System.Windows.Forms.Button();
+            this.txtCompras = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -54,13 +55,16 @@
             this.panel1.Size = new System.Drawing.Size(827, 47);
             this.panel1.TabIndex = 0;
             // 
-            // panel2
+            // pictureBox2
             // 
-            this.panel2.BackColor = System.Drawing.Color.White;
-            this.panel2.Location = new System.Drawing.Point(0, 100);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(827, 353);
-            this.panel2.TabIndex = 1;
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(743, 14);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(25, 25);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 3;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // pictureBox1
             // 
@@ -73,49 +77,47 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
-            // pictureBox2
+            // panel2
             // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(743, 14);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(25, 25);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 3;
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.Location = new System.Drawing.Point(0, 100);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(827, 353);
+            this.panel2.TabIndex = 1;
             // 
             // lbltitle
             // 
             this.lbltitle.AutoSize = true;
-            this.lbltitle.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbltitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbltitle.Location = new System.Drawing.Point(265, 63);
             this.lbltitle.Name = "lbltitle";
-            this.lbltitle.Size = new System.Drawing.Size(290, 17);
+            this.lbltitle.Size = new System.Drawing.Size(273, 16);
             this.lbltitle.TabIndex = 1;
             this.lbltitle.Text = "Realiza el Cobro de los Productos Vendidos";
             // 
             // lblhistoria
             // 
             this.lblhistoria.AutoSize = true;
-            this.lblhistoria.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblhistoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblhistoria.Location = new System.Drawing.Point(82, 98);
             this.lblhistoria.Name = "lblhistoria";
-            this.lblhistoria.Size = new System.Drawing.Size(118, 16);
+            this.lblhistoria.Size = new System.Drawing.Size(107, 13);
             this.lblhistoria.TabIndex = 2;
-            this.lblhistoria.Text = "Historia de Compra: ";
+            this.lblhistoria.Text = "Historia de Compras: ";
             // 
             // lbltotal
             // 
             this.lbltotal.AutoSize = true;
-            this.lbltotal.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbltotal.Location = new System.Drawing.Point(82, 360);
+            this.lbltotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbltotal.Location = new System.Drawing.Point(82, 363);
             this.lbltotal.Name = "lbltotal";
-            this.lbltotal.Size = new System.Drawing.Size(40, 16);
+            this.lbltotal.Size = new System.Drawing.Size(37, 13);
             this.lbltotal.TabIndex = 3;
             this.lbltotal.Text = "Total: ";
             // 
             // txttotal
             // 
+            this.txttotal.Enabled = false;
             this.txttotal.Location = new System.Drawing.Point(129, 360);
             this.txttotal.Name = "txttotal";
             this.txttotal.Size = new System.Drawing.Size(124, 20);
@@ -126,7 +128,7 @@
             this.btncobrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(132)))), ((int)(((byte)(209)))));
             this.btncobrar.FlatAppearance.BorderSize = 0;
             this.btncobrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btncobrar.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btncobrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btncobrar.ForeColor = System.Drawing.Color.White;
             this.btncobrar.Location = new System.Drawing.Point(345, 396);
             this.btncobrar.Name = "btncobrar";
@@ -134,6 +136,15 @@
             this.btncobrar.TabIndex = 5;
             this.btncobrar.Text = "Cobrar";
             this.btncobrar.UseVisualStyleBackColor = false;
+            this.btncobrar.Click += new System.EventHandler(this.btncobrar_Click);
+            // 
+            // txtCompras
+            // 
+            this.txtCompras.Location = new System.Drawing.Point(85, 125);
+            this.txtCompras.Multiline = true;
+            this.txtCompras.Name = "txtCompras";
+            this.txtCompras.Size = new System.Drawing.Size(682, 196);
+            this.txtCompras.TabIndex = 6;
             // 
             // RealizarCobro
             // 
@@ -141,6 +152,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(826, 458);
+            this.Controls.Add(this.txtCompras);
             this.Controls.Add(this.btncobrar);
             this.Controls.Add(this.txttotal);
             this.Controls.Add(this.lbltotal);
@@ -153,8 +165,8 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Realizar Cobro";
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -171,5 +183,6 @@
         private System.Windows.Forms.Label lbltotal;
         private System.Windows.Forms.TextBox txttotal;
         private System.Windows.Forms.Button btncobrar;
+        private System.Windows.Forms.TextBox txtCompras;
     }
 }

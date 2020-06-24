@@ -12,6 +12,7 @@ namespace devproject
 {
     public partial class Fashion : Form
     {
+
         public Fashion()
         {
             InitializeComponent();
