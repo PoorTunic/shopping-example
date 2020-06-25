@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -16,6 +17,7 @@ namespace devproject
         public Fashion()
         {
             InitializeComponent();
+            using (StreamWriter w = File.AppendText("Ticket.txt")) ;
         }
 
         private void Form1_Load(object sender, EventArgs e)

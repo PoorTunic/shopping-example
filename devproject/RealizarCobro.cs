@@ -69,17 +69,17 @@ namespace devproject
             int id = 0;
             foreach (Producto producto in Producto.Cart)
             {
-                sb.Append(id).Append("\t ").Append(producto.Ticket()).Append("\n");
+                sb.Append(id).Append("\t").Append(producto.Ticket()).Append("\r\n");
                 id++;
             }
 
             File.AppendAllLines("Ticket.txt", new String[] {
-                        "#	Tienda Mint Company",
-                        "\t\n\t====TICKET DE COMPRA====",
-                        DateTime.Now.ToString("dd/MM/yyyy") + "\t\n\t",
-                        "\tNo. \t Artículos \t Precio \t\n",
-                        sb.ToString(),
-                        "\t\nTotal a pagar: " + this.txttotal.Text +"\t\t\t"});
+                        "#	Tienda Mint Company\n",
+                        "====TICKET DE COMPRA====\n",
+                        DateTime.Now.ToString("dd/MM/yyyy") + "\n",
+                        "No. \t Artículos \t Precio \n",
+                        sb.ToString()+"\n",
+                        "\t\nTotal a pagar: " + this.txttotal.Text +"\n"});
         }
 
         private void loadData()
