@@ -28,6 +28,9 @@ namespace devproject
             }
 
             loadData();
+            this.txtCompras.ReadOnly = true;
+            ContextMenu blankContext = new ContextMenu();
+            this.txtCompras.ContextMenu = blankContext;
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
@@ -81,15 +84,12 @@ namespace devproject
 
         private void loadData()
         {
-            String[] lines = File.ReadAllLines("Ticket.txt");
-            foreach (String line in lines)
-            {
-                this.txtCompras.AppendText(line + "\n" + "\t");
-            }
+            this.txtCompras.Text = File.ReadAllText("Ticket.txt");
         }
 
         private void txtCompras_TextChanged(object sender, EventArgs e)
         {
+            this.txtCompras.ScrollBars = ScrollBars.Both;
         }
     }
 }

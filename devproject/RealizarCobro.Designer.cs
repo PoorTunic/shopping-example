@@ -142,10 +142,10 @@
             // 
             this.txtCompras.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtCompras.ForeColor = System.Drawing.Color.Black;
-            this.txtCompras.Location = new System.Drawing.Point(191, 129);
+            this.txtCompras.Location = new System.Drawing.Point(22, 129);
             this.txtCompras.Multiline = true;
             this.txtCompras.Name = "txtCompras";
-            this.txtCompras.Size = new System.Drawing.Size(254, 246);
+            this.txtCompras.Size = new System.Drawing.Size(578, 246);
             this.txtCompras.TabIndex = 6;
             this.txtCompras.TextChanged += new System.EventHandler(this.txtCompras_TextChanged);
             // 
