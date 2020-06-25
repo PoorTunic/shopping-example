@@ -1,4 +1,5 @@
 #	Tienda Mint Company
+<<<<<<< HEAD
 
  ====TICKET DE COMPRA====
 23/06/2020
@@ -19,3 +20,26 @@ No. 	 Artículos 	 Precio
 
 
 Total a pagar: 4
+=======
+	
+	====TICKET DE COMPRA====
+24/06/2020	
+	
+	No. 	 Artículos 	 Precio 	
+
+0	 camisa . . . . . $1200
+
+	
+Total a pagar: 900			
+#	Tienda Mint Company
+	
+	====TICKET DE COMPRA====
+24/06/2020	
+	
+	No. 	 Artículos 	 Precio 	
+
+0	 Camisa . . . . . $1200
+
+	
+Total a pagar: 900			
+>>>>>>> 92ff54d8ce60f968ae848fbeb23ce4e5880db4c3

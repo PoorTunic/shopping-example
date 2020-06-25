@@ -72,12 +72,11 @@ namespace devproject
 
             File.AppendAllLines("Ticket.txt", new String[] {
                         "#	Tienda Mint Company",
-                        "\n ====TICKET DE COMPRA====",
-                        DateTime.Now.ToString("dd/MM/yyyy"),
-                        "\nNo. \t Artículos \t Precio",
+                        "\t\n\t====TICKET DE COMPRA====",
+                        DateTime.Now.ToString("dd/MM/yyyy") + "\t\n\t",
+                        "\tNo. \t Artículos \t Precio \t\n",
                         sb.ToString(),
-                        "\nTotal a pagar: " + this.txttotal.Text
-                    });
+                        "\t\nTotal a pagar: " + this.txttotal.Text +"\t\t\t"});
         }
 
         private void loadData()
@@ -85,8 +84,12 @@ namespace devproject
             String[] lines = File.ReadAllLines("Ticket.txt");
             foreach (String line in lines)
             {
-                this.txtCompras.AppendText(line + "\n");
+                this.txtCompras.AppendText(line + "\n" + "\t");
             }
+        }
+
+        private void txtCompras_TextChanged(object sender, EventArgs e)
+        {
         }
     }
 }

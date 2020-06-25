@@ -19,7 +19,7 @@ namespace devproject
             populateTable();
             if (Producto.Cart.Count == 0)
             {
-                MessageBox.Show("Sin elementos para realize operaciones, regrese y agregue elementos al carrito");
+                MessageBox.Show("Sin elementos para realizar operaciones, regrese y agregue elementos al carrito");
                 btnlimpiar.Enabled = false;
                 btnremover.Enabled = false;
             }
@@ -73,9 +73,10 @@ namespace devproject
             dataTable.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 45F));
             dataTable.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 45F));
             dataTable.RowStyles.Add(new RowStyle(SizeType.Absolute, 50F));
-            dataTable.Controls.Add(new Label() { Text = "ID" }, 1, 0);
-            dataTable.Controls.Add(new Label() { Text = "Nombre" }, 2, 0);
-            dataTable.Controls.Add(new Label() { Text = "Precio" }, 3, 0);
+            dataTable.Controls.Add(new Label() { Text = "ID Producto" }, 0, 0);
+            dataTable.Controls.Add(new Label() { Text = "Nombre Producto" }, 1, 0);
+            dataTable.Controls.Add(new Label() { Text = "Precio Producto" }, 2, 0);
+
         }
 
         private void btnlimpiar_Click(object sender, EventArgs e)
@@ -95,7 +96,10 @@ namespace devproject
                 try
                 {
                     Producto.Cart.RemoveAt(id);
-                    this.populateTable();
+                    MessageBox.Show("El producto fue eliminado");
+                    this.Hide();
+                    Form consultar = new ConsultarProductos();
+                    consultar.Show();
                 }
                 catch (System.ArgumentOutOfRangeException)
                 {

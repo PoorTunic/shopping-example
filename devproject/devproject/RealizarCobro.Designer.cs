@@ -52,13 +52,13 @@
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Location = new System.Drawing.Point(-1, -2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(827, 47);
+            this.panel1.Size = new System.Drawing.Size(624, 47);
             this.panel1.TabIndex = 0;
             // 
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(743, 14);
+            this.pictureBox2.Location = new System.Drawing.Point(527, 14);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(25, 25);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -69,7 +69,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(790, 14);
+            this.pictureBox1.Location = new System.Drawing.Point(576, 14);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(25, 25);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -89,7 +89,7 @@
             // 
             this.lbltitle.AutoSize = true;
             this.lbltitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbltitle.Location = new System.Drawing.Point(265, 63);
+            this.lbltitle.Location = new System.Drawing.Point(188, 58);
             this.lbltitle.Name = "lbltitle";
             this.lbltitle.Size = new System.Drawing.Size(273, 16);
             this.lbltitle.TabIndex = 1;
@@ -99,7 +99,7 @@
             // 
             this.lblhistoria.AutoSize = true;
             this.lblhistoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblhistoria.Location = new System.Drawing.Point(82, 98);
+            this.lblhistoria.Location = new System.Drawing.Point(266, 98);
             this.lblhistoria.Name = "lblhistoria";
             this.lblhistoria.Size = new System.Drawing.Size(107, 13);
             this.lblhistoria.TabIndex = 2;
@@ -109,7 +109,7 @@
             // 
             this.lbltotal.AutoSize = true;
             this.lbltotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbltotal.Location = new System.Drawing.Point(82, 363);
+            this.lbltotal.Location = new System.Drawing.Point(251, 407);
             this.lbltotal.Name = "lbltotal";
             this.lbltotal.Size = new System.Drawing.Size(37, 13);
             this.lbltotal.TabIndex = 3;
@@ -118,7 +118,7 @@
             // txttotal
             // 
             this.txttotal.Enabled = false;
-            this.txttotal.Location = new System.Drawing.Point(129, 360);
+            this.txttotal.Location = new System.Drawing.Point(321, 404);
             this.txttotal.Name = "txttotal";
             this.txttotal.Size = new System.Drawing.Size(124, 20);
             this.txttotal.TabIndex = 4;
@@ -130,7 +130,7 @@
             this.btncobrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btncobrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btncobrar.ForeColor = System.Drawing.Color.White;
-            this.btncobrar.Location = new System.Drawing.Point(345, 396);
+            this.btncobrar.Location = new System.Drawing.Point(254, 457);
             this.btncobrar.Name = "btncobrar";
             this.btncobrar.Size = new System.Drawing.Size(130, 38);
             this.btncobrar.TabIndex = 5;
@@ -140,18 +140,21 @@
             // 
             // txtCompras
             // 
-            this.txtCompras.Location = new System.Drawing.Point(85, 125);
+            this.txtCompras.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtCompras.ForeColor = System.Drawing.Color.Black;
+            this.txtCompras.Location = new System.Drawing.Point(191, 129);
             this.txtCompras.Multiline = true;
             this.txtCompras.Name = "txtCompras";
-            this.txtCompras.Size = new System.Drawing.Size(682, 196);
+            this.txtCompras.Size = new System.Drawing.Size(254, 246);
             this.txtCompras.TabIndex = 6;
+            this.txtCompras.TextChanged += new System.EventHandler(this.txtCompras_TextChanged);
             // 
             // RealizarCobro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(826, 458);
+            this.ClientSize = new System.Drawing.Size(621, 541);
             this.Controls.Add(this.txtCompras);
             this.Controls.Add(this.btncobrar);
             this.Controls.Add(this.txttotal);
